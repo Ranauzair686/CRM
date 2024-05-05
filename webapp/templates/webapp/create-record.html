@@ -1,0 +1,29 @@
+{% extends "webapp/base.html" %}
+
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+
+<body>
+
+
+    <div class="container bg-light shadow-md p-5 form-layout">
+
+        <h3>Create a new record </i></h3>
+
+
+        <hr>
+        <br>
+        <form method="POST" autocomplete="off">
+            {% csrf_token %}
+
+
+            {{form3|crispy}} {% comment %} step 67 write form3 as in update record our form key is form3 {% endcomment %}
+            <br>
+            <button type="submit" class="btn btn-primary w-100 btn-block p-2">Create Record &nbsp; <i class="fa fa-check" aria-hidden="true"></i></button>
+        </form>
+</body>
+
+
+{% endblock %}
